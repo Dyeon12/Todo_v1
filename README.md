@@ -2,7 +2,7 @@
 
 # 📅 ToDo Calendar App
 
-### 파스텔톤의 아름다운 디자인으로 만든 할 일 관리 캘린더
+### 파스텔톤의 할 일 관리 캘린더
 
 [![Flask](https://img.shields.io/badge/Flask-2.0+-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 [![Python](https://img.shields.io/badge/Python-3.7+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
@@ -56,7 +56,7 @@
 
 1️⃣ **저장소 클론**
 ```bash
-git clone https://github.com/your-username/test_todo.git
+git clone https://github.com/Dyeon12/test_todo.git
 cd test_todo
 ```
 
@@ -149,30 +149,11 @@ POST /api/todos
 3. **수정**: 할 일을 클릭하여 내용 수정
 4. **삭제**: 삭제 버튼을 클릭하여 할 일 제거
 
-## 🤝 기여하기
-
-기여는 언제나 환영합니다! 다음 단계를 따라주세요:
-
-1. 이 저장소를 Fork 합니다
-2. Feature 브랜치를 생성합니다 (`git checkout -b feature/AmazingFeature`)
-3. 변경사항을 Commit 합니다 (`git commit -m 'Add some AmazingFeature'`)
-4. 브랜치에 Push 합니다 (`git push origin feature/AmazingFeature`)
-5. Pull Request를 생성합니다
-
-## 📄 라이선스
-
-이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
-
-## 📧 문의
-
-프로젝트에 대한 질문이나 제안사항이 있으시면 Issue를 등록해주세요!
 
 ---
 
 <div align="center">
 
-**⭐ 이 프로젝트가 유용하다면 Star를 눌러주세요! ⭐**
-
-Made with ❤️ by [Your Name]
+Made with ❤️ by Dyeon12
 
 </div>
