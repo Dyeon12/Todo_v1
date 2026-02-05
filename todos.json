@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "SRT 뽑기",
+    "date": "2026-02-05",
+    "completed": false,
+    "color": "#FFD1DC",
+    "emoji": "📝"
+  },
+  {
+    "id": 2,
+    "title": "두쫀붕 먹기",
+    "date": "2026-02-05",
+    "completed": true,
+    "color": "#E0FFE0",
+    "emoji": "🍕"
+  }
+]

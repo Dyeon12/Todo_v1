@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📅 ToDo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📅 ToDo</h1>
+            <button id="addTodoBtn" class="add-btn">+new</button>
+        </header>
+
+        <div class="calendar-controls">
+            <button id="prevMonth" class="nav-btn">‹</button>
+            <h2 id="currentMonth"></h2>
+            <button id="nextMonth" class="nav-btn">›</button>
+        </div>
+
+        <div class="calendar">
+            <div class="weekdays">
+                <div>일</div>
+                <div>월</div>
+                <div>화</div>
+                <div>수</div>
+                <div>목</div>
+                <div>금</div>
+                <div>토</div>
+            </div>
+            <div id="calendarDays" class="days"></div>
+        </div>
+
+        <div class="selected-date-todos">
+            <h3 id="selectedDateTitle">투두 목록</h3>
+            <div id="todoList"></div>
+        </div>
+    </div>
+
+    <!-- 투두 추가/수정 모달 -->
+    <div id="todoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">새 투두 추가</h2>
+            <form id="todoForm">
+                <div class="form-group">
+                    <label>제목</label>
+                    <input type="text" id="todoTitle" required placeholder="할 일을 입력하세요">
+                </div>
+                <div class="form-group">
+                    <label>이모지</label>
+                    <div class="emoji-picker">
+                        <div class="emoji-option" data-emoji="📝">📝</div>
+                        <div class="emoji-option" data-emoji="💼">💼</div>
+                        <div class="emoji-option" data-emoji="🏃">🏃</div>
+                        <div class="emoji-option" data-emoji="🎯">🎯</div>
+                        <div class="emoji-option" data-emoji="📚">📚</div>
+                        <div class="emoji-option" data-emoji="🎨">🎨</div>
+                        <div class="emoji-option" data-emoji="💡">💡</div>
+                        <div class="emoji-option" data-emoji="✨">✨</div>
+                        <div class="emoji-option" data-emoji="🎵">🎵</div>
+                        <div class="emoji-option" data-emoji="🍕">🍕</div>
+                    </div>
+                    <input type="hidden" id="todoEmoji" value="📝">
+                </div>
+                <div class="form-group">
+                    <label>날짜</label>
+                    <input type="date" id="todoDate" required>
+                </div>
+                <div class="form-group">
+                    <label>색상</label>
+                    <div class="color-picker">
+                        <div class="color-option" data-color="#FFD1DC" style="background: #FFD1DC;"></div>
+                        <div class="color-option" data-color="#FFDAB9" style="background: #FFDAB9;"></div>
+                        <div class="color-option" data-color="#FFFACD" style="background: #FFFACD;"></div>
+                        <div class="color-option" data-color="#E0FFE0" style="background: #E0FFE0;"></div>
+                        <div class="color-option" data-color="#E0F4FF" style="background: #E0F4FF;"></div>
+                        <div class="color-option" data-color="#E6E6FA" style="background: #E6E6FA;"></div>
+                    </div>
+                    <input type="hidden" id="todoColor" value="#FFD1DC">
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">저장</button>
+                    <button type="button" class="btn-secondary" id="cancelBtn">취소</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 날짜별 투두 리스트 팝업 모달 -->
+    <div id="dateTodoModal" class="modal">
+        <div class="modal-content date-modal">
+            <span class="close-date-modal">&times;</span>
+            <h2 id="dateModalTitle"></h2>
+            <button id="addTodoInModal" class="add-btn-modal">+new</button>
+            <div id="dateModalTodoList" class="date-modal-todos"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
